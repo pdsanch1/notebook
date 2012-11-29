@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+notes = [
+  {entry: "Rails Models are Ruby classes intended to represent real-word things."},
+  {entry: "Instance variables in controllers hold data for the views."},
+  {entry: "Rails is best for database-backed web applications."},
+  {entry: "Javascript is pretty cool."},
+  {entry: "Pairing accelerates learning."}  
+  ]
+  
+Note.create notes

@@ -1,3 +1,7 @@
 Notebook::Application.routes.draw do
-  root to: 'pages#mockup'
+  resources :notes
+
+  root to: 'Notes#index'
+  
+  get '/mockup' => 'Pages#mockup'
 end
