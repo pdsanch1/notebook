@@ -1,0 +1,3 @@
+$("#new_note").before("<%= j(render 'note', :note => @note) %>");
+$("#<%= dom_id(@note) %>").slideDown();
+$("#note_entry").val('');
