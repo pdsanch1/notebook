@@ -1,4 +1,13 @@
 <ul>
+  <li>
+    <%= form_tag notes_url, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], :placeholder => 'Search notes', :size => 55 %>    
+      <%= label_tag :strict, "Strict?" %>
+      <%= check_box_tag :strict, true, params[:strict] %>
+      
+      <%= submit_tag 'Search' %>
+    <% end %>
+  </li>
   <% @notes.each do |note| %>
     <%= render 'note', :note => note %>
   <% end %>

@@ -2,10 +2,10 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    @notes = Note.search(params[:search], params[:strict])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @notes }
     end
   end
